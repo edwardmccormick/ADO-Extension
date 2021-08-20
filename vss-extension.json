@@ -1,7 +1,7 @@
 {
-    "manifestVersion": 1,
-    "id": "my-first-extension",
-    "publisher": "",
+    "manifestVersion": 1.01,
+    "id": "example-extension",
+    "publisher": "EdwardMcCormick-SWBC",
     "version": "1.0.0",
     "name": "My First Extension",
     "description": "A sample Visual Studio Services extension",
@@ -21,13 +21,18 @@
             ],
             "properties": {
                 "name": "My Hub",
-                "uri": "my-hub.html"
+                "uri": "my-hub.html",
+                "baseUri": "https://localhost:44300"
             }
         }
     ],
     "files": [
         {
             "path": "my-hub.html",
+            "addressable": true
+        },
+        {
+            "path": "dashboard.html",
             "addressable": true
         },
         {
