@@ -1,8 +1,8 @@
 {
-    "manifestVersion": 1.01,
+    "manifestVersion": 1.0,
     "id": "example-extension",
     "publisher": "EdwardMcCormick-SWBC",
-    "version": "1.0.0",
+    "version": "1.0.1.4",
     "name": "My First Extension",
     "description": "A sample Visual Studio Services extension",
     "public": false,
@@ -24,6 +24,18 @@
                 "uri": "my-hub.html",
                 "baseUri": "https://localhost:44300"
             }
+        },
+        {
+            "id": "my-workitem-dashboard",
+            "type": "ms.vss-dashboard",
+            "targets": [
+                "ms.vss-code-web.code-hub-group"
+            ],
+            "properties": {
+                "name": "Dashboard",
+                "uri": "dashboard.html",
+                "baseUri": "https://localhost:44300"
+            }
         }
     ],
     "files": [
@@ -39,6 +51,14 @@
             "path": "node_modules/vss-web-extension-sdk/lib",
             "addressable": true,
             "packagePath": "lib"
+        },
+        {
+            "path": "JS/fetch.js",
+            "addressable": true
+        },
+        {
+            "path": "JS/keys.js",
+            "addressable": true
         }
     ]
 }
